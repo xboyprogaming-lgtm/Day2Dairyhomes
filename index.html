@@ -2,141 +2,158 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Day2 Dairy Homes</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Day2 Dairy Homes — fresh eggs delivered to your doorstep.">
+<title>Day2 Dairy Homes | Fresh Eggs Delivered</title>
 <style>
-  *{box-sizing:border-box}
-  body{
-    margin:0;font-family:Georgia,"Times New Roman",serif;
-    background:#f4f1e6;color:#263b2b;font-size:14px;
-  }
-  header{
-    background:#e7ead7;border-bottom:1px solid #c5cdb6;
-    padding:18px 28px;display:flex;align-items:center;justify-content:space-between;
-  }
-  .brand{font-size:22px;font-weight:bold;letter-spacing:.5px}
-  .tag{font-size:12px;color:#65705e}
-  main{max-width:1050px;margin:28px auto;padding:0 20px}
-  .hero{
-    background:#dfe7d2;border-radius:16px;padding:30px;
-    display:flex;justify-content:space-between;gap:25px;align-items:center;
-  }
-  h1{margin:0 0 8px;font-size:30px}
-  .hero p{margin:0;color:#5c6858;max-width:600px;line-height:1.6}
-  .leaf{font-size:60px}
-  .grid{display:grid;grid-template-columns:2fr 1fr;gap:22px;margin-top:22px}
-  .panel{
-    background:#fffdf6;border:1px solid #d9ddca;border-radius:14px;padding:20px;
-  }
-  h2{font-size:18px;margin:0 0 16px}
-  .product{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:14px 0;border-bottom:1px solid #e5e7db;gap:15px;
-  }
-  .product:last-child{border-bottom:0}
-  .icon{font-size:30px}
-  .name{font-weight:bold}.desc{font-size:12px;color:#7b8274;margin-top:4px}
-  .price{font-weight:bold;margin-right:auto;margin-left:12px}
-  button{
-    border:0;border-radius:9px;padding:8px 12px;cursor:pointer;
-    background:#496a4b;color:white;font-family:inherit;font-size:12px;
-  }
-  button:hover{opacity:.88}
-  .cart-row{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid #e5e7db}
-  .qty button{padding:4px 8px;margin-left:3px}
-  .total{display:flex;justify-content:space-between;font-weight:bold;padding:16px 0}
-  .order{width:100%;background:#3f7148;padding:11px}
-  .empty{color:#8a9184;font-size:12px}
-  footer{text-align:center;color:#727a6d;font-size:12px;padding:28px}
-  a{color:#496a4b}
-  @media(max-width:750px){.grid{grid-template-columns:1fr}.hero{padding:22px}.leaf{font-size:45px}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f5f2e8;color:#26382b;font-family:Georgia,"Times New Roman",serif;font-size:14px;line-height:1.55}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:10;background:rgba(246,244,235,.96);border-bottom:1px solid #d9ddca;backdrop-filter:blur(8px)}
+.nav{max-width:1120px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:bold;font-size:19px}
+.brand img{width:43px;height:43px;object-fit:cover;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 9px #0002}
+nav{display:flex;gap:17px;font-size:12px;color:#596653}
+nav a:hover{color:#355c3d}
+main{max-width:1120px;margin:auto;padding:24px 20px 45px}
+.hero{min-height:360px;border:1px solid #d2d9c2;border-radius:22px;background:linear-gradient(135deg,#dfe9d2,#edf0df);display:grid;grid-template-columns:1.35fr .65fr;align-items:center;overflow:hidden}
+.heroText{padding:42px}
+.kicker{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#638060}
+h1{font-size:42px;line-height:1.08;margin:8px 0 14px}
+.hero p{max-width:650px;color:#5f6b5c}
+.logoLarge{width:min(250px,80%);aspect-ratio:1;object-fit:cover;border-radius:50%;margin:auto;box-shadow:0 12px 30px #31452a25;border:7px solid #fff}
+.btn{display:inline-block;background:#416d49;color:#fff;padding:10px 17px;border-radius:10px;font-size:12px;margin-top:10px;box-shadow:0 4px 12px #416d4925}
+.btn.alt{background:#fff;color:#416d49;border:1px solid #cbd5c2;margin-left:7px}
+section{margin-top:24px}
+.sectionTitle{display:flex;align-items:end;justify-content:space-between;margin-bottom:12px}
+h2{font-size:22px;margin:0}
+.muted{color:#737c70;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#fffdf7;border:1px solid #dce0d2;border-radius:15px;padding:19px}
+.cardIcon{font-size:31px}
+.card h3{font-size:16px;margin:7px 0 4px}
+.price{font-size:20px;font-weight:bold;color:#355e3d}
+.product{display:grid;grid-template-columns:85px 1fr auto;align-items:center;gap:15px}
+.productImg{width:85px;height:85px;border-radius:13px;background:#f1ead5;display:grid;place-items:center;font-size:45px}
+.controls{display:flex;align-items:center;gap:7px;margin-top:8px}
+button{font-family:inherit;border:0;border-radius:8px;background:#416d49;color:white;padding:7px 11px;cursor:pointer;font-size:12px}
+.qty{min-width:26px;text-align:center;font-weight:bold}
+.coming{background:#fff7df;border:1px dashed #d6b65d}
+.badge{display:inline-block;font-size:10px;letter-spacing:1px;text-transform:uppercase;background:#eadba9;color:#685829;border-radius:20px;padding:4px 8px}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cart{position:sticky;top:80px}
+.cartRow{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e5e7dc}
+.total{display:flex;justify-content:space-between;font-weight:bold;font-size:16px;padding:13px 0}
+.notice{font-size:11px;color:#7b8377;margin-top:9px}
+.contact{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.contact a{background:#f0f3e7;border:1px solid #d7deca;border-radius:11px;padding:12px}
+footer{text-align:center;border-top:1px solid #d9ddca;padding:25px;color:#737b70;font-size:11px}
+@media(max-width:780px){
+nav{display:none}.hero{grid-template-columns:1fr}.heroText{padding:28px}.logoLarge{width:180px;margin:0 auto 28px}
+h1{font-size:32px}.grid,.info,.contact{grid-template-columns:1fr}.cart{position:static}.product{grid-template-columns:70px 1fr}.product>button{grid-column:2}
+}
 </style>
 </head>
 <body>
 <header>
-  <div>
-    <div class="brand">🌿 Day2 Dairy Homes</div>
-    <div class="tag">Fresh • Local • Delivered with care</div>
-  </div>
-  <div>🛒 Cart: <span id="count">0</span></div>
+<div class="nav">
+<a class="brand" href="#"><img src="logo.png" alt="Day2 Dairy Homes logo"><span>🌿 Day2 Dairy Homes</span></a>
+<nav><a href="#shop">Shop</a><a href="#coming">Coming Soon</a><a href="#about">About</a><a href="#investors">Investors</a><a href="#contact">Contact</a></nav>
+<div>🛒 <span id="count">0</span></div>
+</div>
 </header>
 
 <main>
-  <section class="hero">
-    <div>
-      <h1>Freshness at your doorstep</h1>
-      <p>Simple home delivery for everyday dairy and fresh essentials. Add items to your cart and send your order directly to us on WhatsApp.</p>
-    </div>
-    <div class="leaf">🥛🌱</div>
-  </section>
+<section class="hero">
+<div class="heroText">
+<div class="kicker">Fresh • Local • Home Delivery</div>
+<h1>Good eggs. Good days. 🥚🌿</h1>
+<p>Welcome to <b>Day2 Dairy Homes</b> — your simple home-delivery place for fresh eggs. Order online, add your quantity to the cart, and send the order straight to WhatsApp.</p>
+<a class="btn" href="#shop">Shop Eggs</a><a class="btn alt" href="#coming">See What's Coming</a>
+</div>
+<div><img class="logoLarge" src="logo.png" alt="Day2 Dairy Homes cute cow logo"></div>
+</section>
 
-  <div class="grid">
-    <section class="panel">
-      <h2>Our Products</h2>
-      <div class="product">
-        <div class="icon">🥚</div>
-        <div><div class="name">Fresh Eggs</div><div class="desc">Farm-fresh eggs</div></div>
-        <div class="price" id="eggPrice">Set price</div>
-        <button onclick="addItem('Fresh Eggs', eggPriceValue)">Add</button>
-      </div>
-      <p class="desc">More products can be added here as your shop grows.</p>
-    </section>
+<section id="shop">
+<div class="sectionTitle"><h2>🥚 Fresh Eggs</h2><span class="muted">₹10 each</span></div>
+<div class="info">
+<div class="card product">
+<div class="productImg">🥚</div>
+<div><h3>Fresh Egg</h3><div class="muted">Fresh everyday • ₹10 per egg</div><div class="controls"><button onclick="change(-1)">−</button><span class="qty" id="qty">0</span><button onclick="change(1)">+</button></div></div>
+<button onclick="change(1)">Add</button>
+</div>
+<div class="card cart">
+<h3>🛒 Your Cart</h3>
+<div id="cartBox" class="muted">Your cart is empty.</div>
+<div class="total"><span>Total</span><span>₹<span id="total">0</span></span></div>
+<button style="width:100%;background:#3f7548" onclick="order()">💬 Order on WhatsApp</button>
+<div class="notice">Your order message will open in WhatsApp with the selected quantity.</div>
+</div>
+</div>
+</section>
 
-    <aside class="panel">
-      <h2>Your Cart</h2>
-      <div id="cart"><div class="empty">Your cart is empty.</div></div>
-      <div class="total"><span>Total</span><span>₹<span id="total">0</span></span></div>
-      <button class="order" onclick="orderWhatsApp()">Order on WhatsApp</button>
-      <p class="desc" style="margin-top:12px">WhatsApp: 9954642451</p>
-      <p class="desc">Email: <a href="mailto:xboyprogaming@gmail.com">xboyprogaming@gmail.com</a></p>
-    </aside>
-  </div>
+<section id="coming">
+<div class="sectionTitle"><h2>🍓 Coming Soon</h2><span class="badge">New</span></div>
+<div class="grid">
+<div class="card coming"><div class="cardIcon">🍓</div><h3>Fresh Strawberries</h3><p class="muted">Coming soon — seasonal freshness is on the way.</p></div>
+<div class="card coming"><div class="cardIcon">🌱</div><h3>More Fresh Picks</h3><p class="muted">We're preparing more natural, local products for Day2Dairy.</p></div>
+<div class="card coming"><div class="cardIcon">🏡</div><h3>More Home Delivery</h3><p class="muted">Our delivery service will keep growing with you.</p></div>
+</div>
+</section>
+
+<section id="about">
+<div class="sectionTitle"><h2>🌿 Why Day2 Dairy Homes?</h2></div>
+<div class="grid">
+<div class="card"><div class="cardIcon">🥚</div><h3>Fresh First</h3><p class="muted">We keep our shop simple and focused on fresh eggs.</p></div>
+<div class="card"><div class="cardIcon">🚲</div><h3>Home Delivery</h3><p class="muted">Choose your quantity online and contact us for delivery.</p></div>
+<div class="card"><div class="cardIcon">💚</div><h3>Simple & Friendly</h3><p class="muted">No complicated checkout — your order goes directly to WhatsApp.</p></div>
+</div>
+</section>
+
+<section>
+<div class="card" style="text-align:center">
+<div class="kicker">Day2Dairy</div>
+<h2>From our home to yours 🏡</h2>
+<p class="muted">A small local shop with a big love for fresh food.</p>
+</div>
+</section>
+
+
+<section id="investors">
+<div class="sectionTitle"><h2>🤝 Our Investors</h2><span class="muted">Supporting Day2 Dairy Homes</span></div>
+<div class="grid">
+<div class="card"><div class="cardIcon">🌿</div><h3>Shafik Hassan</h3><p class="muted">Investor</p></div>
+<div class="card"><div class="cardIcon">🌱</div><h3>Rezaul Karim</h3><p class="muted">Investor</p></div>
+<div class="card"><div class="cardIcon">🥚</div><h3>Numan Kamran</h3><p class="muted">Investor</p></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="sectionTitle"><h2>📞 Contact Day2 Dairy</h2></div>
+<div class="contact">
+<a href="https://wa.me/919954642451">💬 <b>WhatsApp</b><br><span class="muted">9954642451</span></a>
+<a href="mailto:xboyprogaming@gmail.com">✉️ <b>Email</b><br><span class="muted">xboyprogaming@gmail.com</span></a>
+</div>
+</section>
 </main>
 
-<footer>© 2026 Day2 Dairy Homes • Freshly served, naturally.</footer>
+<footer>© 2026 Day2 Dairy Homes • Fresh • Local • Delivered with care 🌿</footer>
 
 <script>
-const eggPriceValue = 0; // Change this to the price of one egg.
-const cart = {};
-
-function addItem(name, price){
-  if(price <= 0){ alert("Please set the egg price in the code first."); return; }
-  cart[name] = cart[name] || {price, qty:0};
-  cart[name].qty++;
-  render();
-}
-function changeQty(name, amount){
-  cart[name].qty += amount;
-  if(cart[name].qty <= 0) delete cart[name];
-  render();
-}
+let qty=0;
+function change(n){qty=Math.max(0,qty+n);document.getElementById("qty").textContent=qty;render()}
 function render(){
-  const box=document.getElementById("cart");
-  let total=0,count=0;
-  if(Object.keys(cart).length===0) box.innerHTML='<div class="empty">Your cart is empty.</div>';
-  else{
-    box.innerHTML=Object.entries(cart).map(([name,item])=>{
-      total += item.price*item.qty; count += item.qty;
-      return `<div class="cart-row"><div>${name}<br><small>₹${item.price} × ${item.qty}</small></div>
-      <div class="qty"><button onclick="changeQty('${name}',-1)">−</button><button onclick="changeQty('${name}',1)">+</button></div></div>`;
-    }).join("");
-  }
-  document.getElementById("total").textContent=total;
-  document.getElementById("count").textContent=count;
+document.getElementById("count").textContent=qty;
+document.getElementById("total").textContent=qty*10;
+document.getElementById("cartBox").innerHTML=qty?`<div class="cartRow"><span>🥚 Fresh Eggs × ${qty}</span><b>₹${qty*10}</b></div>`:'Your cart is empty.';
 }
-function orderWhatsApp(){
-  if(Object.keys(cart).length===0){alert("Add something to your cart first.");return;}
-  let lines=["🌿 Hello Day2 Dairy Homes!","I'd like to place an order:",""];
-  let total=0;
-  Object.entries(cart).forEach(([name,item])=>{
-    lines.push(`🥚 ${name} × ${item.qty} = ₹${item.price*item.qty}`);
-    total += item.price*item.qty;
-  });
-  lines.push("",`Total: ₹${total}`,"","Please confirm my order. 😊");
-  const url="https://wa.me/919954642451?text="+encodeURIComponent(lines.join("\n"));
-  window.open(url,"_blank");
+function order(){
+if(!qty){alert("Please add at least 1 egg to your cart.");return}
+const msg=`🌿 Hello Day2 Dairy Homes!\nI'd like to order:\n🥚 Fresh Eggs × ${qty}\nTotal: ₹${qty*10}\n\nPlease confirm my order. 😊`;
+window.open("https://wa.me/919954642451?text="+encodeURIComponent(msg),"_blank");
 }
-document.getElementById("eggPrice").textContent = eggPriceValue > 0 ? "₹"+eggPriceValue : "Set price";
+render();
 </script>
 </body>
 </html>
