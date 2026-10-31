@@ -48,6 +48,13 @@ button{font-family:inherit;border:0;border-radius:8px;background:#416d49;color:w
 .notice{font-size:11px;color:#7b8377;margin-top:9px}
 .contact{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .contact a{background:#f0f3e7;border:1px solid #d7deca;border-radius:11px;padding:12px}
+.socialLinks{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.socialLinks a{display:inline-block;background:#416d49;color:#fff;padding:9px 14px;border-radius:20px;font-size:12px}
+.creatorNote{background:linear-gradient(135deg,#f0f3e7,#fff8e8);border:1px solid #dce0d2;border-radius:18px;padding:25px;text-align:center}
+.signature{font-style:italic;font-size:18px;color:#416d49;margin-top:12px}
+.stockTag{display:inline-block;background:#f2e5c9;color:#80612b;border-radius:20px;padding:4px 9px;font-size:10px;letter-spacing:.7px;text-transform:uppercase}
+.productSoon{min-height:170px}
+
 footer{text-align:center;border-top:1px solid #d9ddca;padding:25px;color:#737b70;font-size:11px}
 @media(max-width:780px){
 nav{display:none}.hero{grid-template-columns:1fr}.heroText{padding:28px}.logoLarge{width:180px;margin:0 auto 28px}
@@ -59,7 +66,7 @@ h1{font-size:32px}.grid,.info,.contact{grid-template-columns:1fr}.cart{position:
 <header>
 <div class="nav">
 <a class="brand" href="#"><img src="logo.png" alt="Day2 Dairy Homes logo"><span>🌿 Day2 Dairy Homes</span></a>
-<nav><a href="#shop">Shop</a><a href="#coming">Coming Soon</a><a href="#about">About</a><a href="#investors">Investors</a><a href="#contact">Contact</a></nav>
+<nav><a href="#shop">Shop</a><a href="#coming">Coming Soon</a><a href="#about">About Us</a><a href="#creators">Creators</a><a href="#contact">Contact</a></nav>
 <div>🛒 <span id="count">0</span></div>
 </div>
 </header>
@@ -94,20 +101,30 @@ h1{font-size:32px}.grid,.info,.contact{grid-template-columns:1fr}.cart{position:
 </section>
 
 <section id="coming">
-<div class="sectionTitle"><h2>🍓 Coming Soon</h2><span class="badge">New</span></div>
+<div class="sectionTitle"><h2>🥚 More Fresh Picks</h2><span class="badge">Coming Soon</span></div>
+<p class="muted">We're growing our little home shop. These products are planned for the next arrivals and are not available to order yet.</p>
 <div class="grid">
-<div class="card coming"><div class="cardIcon">🍓</div><h3>Fresh Strawberries</h3><p class="muted">Coming soon — seasonal freshness is on the way.</p></div>
-<div class="card coming"><div class="cardIcon">🌱</div><h3>More Fresh Picks</h3><p class="muted">We're preparing more natural, local products for Day2Dairy.</p></div>
-<div class="card coming"><div class="cardIcon">🏡</div><h3>More Home Delivery</h3><p class="muted">Our delivery service will keep growing with you.</p></div>
+<div class="card coming productSoon"><div class="cardIcon">🐣</div><h3>Quail Eggs</h3><p class="muted">Small, delicate eggs — planned for a future fresh-stock arrival.</p><span class="stockTag">Coming soon · Out of stock</span></div>
+<div class="card coming productSoon"><div class="cardIcon">🥚</div><h3>Chicken Eggs</h3><p class="muted">A fresh everyday favourite. This listed variety will be announced when available.</p><span class="stockTag">Coming soon · Out of stock</span></div>
+<div class="card coming productSoon"><div class="cardIcon">🦆</div><h3>Duck Eggs</h3><p class="muted">A richer egg option we're hoping to bring to the shop.</p><span class="stockTag">Coming soon · Out of stock</span></div>
+<div class="card coming productSoon"><div class="cardIcon">🧅</div><h3>Onions</h3><p class="muted">Everyday kitchen essentials are on our upcoming list.</p><span class="stockTag">Coming soon · Out of stock</span></div>
+<div class="card coming productSoon"><div class="cardIcon">🫚</div><h3>Ginger</h3><p class="muted">Fresh ginger may join our local product range soon.</p><span class="stockTag">Coming soon · Out of stock</span></div>
+<div class="card coming productSoon"><div class="cardIcon">🧄</div><h3>Garlic</h3><p class="muted">A little more freshness for your kitchen — coming soon.</p><span class="stockTag">Coming soon · Out of stock</span></div>
 </div>
 </section>
 
 <section id="about">
-<div class="sectionTitle"><h2>🌿 Why Day2 Dairy Homes?</h2></div>
-<div class="grid">
-<div class="card"><div class="cardIcon">🥚</div><h3>Fresh First</h3><p class="muted">We keep our shop simple and focused on fresh eggs.</p></div>
-<div class="card"><div class="cardIcon">🚲</div><h3>Home Delivery</h3><p class="muted">Choose your quantity online and contact us for delivery.</p></div>
-<div class="card"><div class="cardIcon">💚</div><h3>Simple & Friendly</h3><p class="muted">No complicated checkout — your order goes directly to WhatsApp.</p></div>
+<div class="sectionTitle"><h2>🌿 About Day2 Dairy Homes</h2></div>
+<div class="creatorNote">
+<div class="kicker">A little shop, a lot of heart</div>
+<h2>Made with care, grown with you 🏡</h2>
+<p class="muted">Day2 Dairy Homes was created by us with a simple idea: make fresh everyday essentials easier to find and bring a little more care to local shopping. We're starting small, learning as we grow, and building this home-grown project one happy order at a time.</p>
+<div class="signature">“From our home to yours, with care in every little thing.”</div>
+</div>
+<div class="grid" style="margin-top:16px">
+<div class="card"><div class="cardIcon">🥚</div><h3>Fresh First</h3><p class="muted">We keep our shop simple and focused on freshness and quality.</p></div>
+<div class="card"><div class="cardIcon">🚲</div><h3>Local & Friendly</h3><p class="muted">A small local project built around friendly service and home delivery.</p></div>
+<div class="card"><div class="cardIcon">💚</div><h3>Growing Together</h3><p class="muted">Your support helps us bring more everyday products to the shop.</p></div>
 </div>
 </section>
 
@@ -120,12 +137,22 @@ h1{font-size:32px}.grid,.info,.contact{grid-template-columns:1fr}.cart{position:
 </section>
 
 
+<section id="creators">
+<div class="sectionTitle"><h2>🤍 The People Behind Day2 Dairy</h2><span class="muted">Our little team</span></div>
+<div class="card">
+<p class="muted">We're the people creating and looking after Day2 Dairy Homes. Follow our Instagram pages to see updates, new arrivals, and little moments from our journey.</p>
+<div class="socialLinks">
+<a href="https://www.instagram.com/meeh6740/" target="_blank" rel="noopener">📷 @meeh6740</a>
+<a href="https://www.instagram.com/r_z_a_u_l_2480_/" target="_blank" rel="noopener">📷 @r_z_a_u_l_2480_</a>
+</div>
+</div>
+</section>
+
 <section id="investors">
 <div class="sectionTitle"><h2>🤝 Our Investors</h2><span class="muted">Supporting Day2 Dairy Homes</span></div>
 <div class="grid">
 <div class="card"><div class="cardIcon">🌿</div><h3>Shafik Hassan</h3><p class="muted">Investor</p></div>
 <div class="card"><div class="cardIcon">🌱</div><h3>Rezaul Karim</h3><p class="muted">Investor</p></div>
-<div class="card"><div class="cardIcon">🥚</div><h3>Numan Kamran</h3><p class="muted">Investor</p></div>
 </div>
 </section>
 
@@ -138,7 +165,7 @@ h1{font-size:32px}.grid,.info,.contact{grid-template-columns:1fr}.cart{position:
 </section>
 </main>
 
-<footer>© 2026 Day2 Dairy Homes • Fresh • Local • Delivered with care 🌿</footer>
+<footer>© 2026 Day2 Dairy Homes • Made with care, from our home to yours 🌿</footer>
 
 <script>
 let qty=0;
